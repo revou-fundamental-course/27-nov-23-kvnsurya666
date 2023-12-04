@@ -1,10 +1,25 @@
-function getValue() {
-  var select = document.getElementById("selectOption");
-  var luas = select.options[select.selectedIndex].value;
-  document.getElementById("luas").innerHTML = luas;
-  var keliling = select.options[select.selectedIndex].value;
-  document.getElementById("keliling").innerHTML = keliling;
+function luasSegitiga() {
+  document.getElementById("luasSegitiga").innerHTML =
+    "This is the content for Function 1.";
 }
+
+function kelilingSegitiga() {
+  document.getElementById("kelilingSegitiga").innerHTML =
+    "This is the content for Function 2.";
+}
+
+document
+  .getElementById("select-function")
+  .addEventListener("change", function () {
+    switch (this.value) {
+      case "luasSegitiga":
+        luasSegitiga();
+        break;
+      case "kelilingSegitiga":
+        kelilingSegitiga();
+        break;
+    }
+  });
 
 function hitung() {
   var sisi1 = document.getElementById("sisi1").value;
