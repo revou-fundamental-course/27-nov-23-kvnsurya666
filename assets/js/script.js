@@ -12,13 +12,14 @@ function hitung() {
   var sisi3 = document.getElementById("sisi3").value;
   var tinggi = document.getElementById("tinggi").value;
 
-  if (sisi1 == "" || sisi2 == "" || sisi3 == "" || tinggi == "") {
+  if (alas == "" || sisi1 == "" || sisi2 == "" || sisi3 == "" || tinggi == "") {
     alert("Mohon isi semua input");
   } else {
-    var luas = 0.5 * sisi1 * tinggi;
+    var luas = 0.5 * alas * tinggi;
     var keliling = sisi1 + sisi2 + sisi3;
 
-    document.getElementById("luas").innerHTML = "Luas Segitiga: " + luas;
+    document.getElementById("luasSegitiga").innerHTML =
+      "Luas Segitiga: " + luasSegitiga;
     document.getElementById("keliling").innerHTML =
       "Keliling Segitiga: " + keliling;
   }
