@@ -3,20 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keliling Segitiga</title>
+    <title>Katik Keliling Segitiga</title>
 
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <header id="navigation-bar">
-      <h1 id="logo-luas">Keliling Segitiga</h1>
-      <nav class="navigation">
-        <a href="index.html">Home</a>
-        <a href="luas_segitiga.html">Luas Segitiga</a>
-      </nav>
+      <h1 id="logo">Katik</h1>
+      <select id="segitiga" name="segitiga">
+        <option value="luas">Luas Segitiga</option>
+        <option value="keliling">Keliling Segitiga</option>
+      </select>
     </header>
-    <h1 style="text-align: center">Hitung Keliling Segitiga</h1>
-    <section class="input-keliling-section">
+    <section class="input-keliling-section" id="kelilingSegitiga">
       <label for="input-sisi1" id="label-sisi1">Sisi</label>
       <input type="number" id="input-sisi" class="katik-input" />
       <label for="input-sisi2" id="label-sisi2">Sisi</label>
@@ -24,10 +23,21 @@
       <label for="input-sisi2" id="label-sisi3">Sisi</label>
       <input type="number" id="input-sisi" class="katik-input" />
       <div class="buttons">
-        <button>Hitung</button>
-        <button>Reset</button>
+        <button onclick="hitung()">Hitung</button>
+        <h3 id="keliling"></h3>
+        <button onclick="clear()">Reset</button>
       </div>
     </section>
+
+    <!-- <div class="container">
+      <h1>Kalkulator Luas dan Keliling Segitiga</h1>
+      <input type="number" id="sisi1" placeholder="Masukkan panjang sisi 1" />
+      <input type="number" id="sisi2" placeholder="Masukkan panjang sisi 2" />
+      <input type="number" id="tinggi" placeholder="Masukkan panjang tinggi" />
+      <button onclick="hitung()">Hitung</button>
+      <h2 id="luas"></h2>
+      <h2 id="keliling"></h2>
+    </div> -->
     <script src="assets/js/script.js"></script>
   </body>
 </html>
