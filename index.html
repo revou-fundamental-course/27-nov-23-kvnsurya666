@@ -21,46 +21,52 @@
       </select>
     </header>
 
-    <div id="areaFields">
-      <img
-        src="assets/images/gambar-segitiga.png"
-        alt="Gambar Segitiga"
-        class="gambar-segitiga"
-      />
-      <p>Rumus Luas Segitiga yaitu :</p>
-      <h4 style="text-align: center">L = 1/2 x a x t</h4>
-      <p>Di mana :</p>
-      L = Luas <br />
-      a = Panjang Alas <br />
-      t = Tinggi
-      <h1 id="luas">Hitung Luas Segitiga</h1>
+    <div class="container">
+      <div id="areaFields">
+        <img
+          src="assets/images/gambar-segitiga.png"
+          alt="Gambar Segitiga"
+          class="gambar-segitiga"
+        />
+        <p>Rumus Luas Segitiga yaitu :</p>
+        <h4 style="text-align: center">L = 1/2 x a x t</h4>
+        <p>Di mana :</p>
+        L = Luas <br />
+        a = Panjang Alas <br />
+        t = Tinggi
 
-      <input type="number" id="base" placeholder="Nilai Alas" />
+        <div class="garis-pembatas"></div>
+        <h1 style="text-align: center">Hitung Luas Segitiga</h1>
 
-      <input type="number" id="height" placeholder="Nilai Tinggi" />
+        <input type="number" id="base" placeholder="Nilai Alas" />
+        <input type="number" id="height" placeholder="Nilai Tinggi" />
+      </div>
     </div>
 
-    <div id="perimeterFields" style="display: none">
-      <img
-        src="assets/images/gambar-segitiga.png"
-        alt="Gambar Segitiga"
-        class="gambar-segitiga"
-      />
-      <p>Rumus Keliling Segitiga yaitu :</p>
-      <h4 style="text-align: center">K = S1 + S2 + S3</h4>
-      <p>Di mana :</p>
-      K = Keliling <br />
-      S1 = Sisi A <br />
-      S2 = Sisi B <br />
-      S3 = Sisi C <br />
-      <h1 id="luas">Hitung Keliling Segitiga</h1>
+    <div class="container">
+      <div id="perimeterFields" style="display: none">
+        <img
+          src="assets/images/gambar-segitiga.png"
+          alt="Gambar Segitiga"
+          class="gambar-segitiga"
+        />
+        <p>Rumus Keliling Segitiga yaitu :</p>
+        <h4 style="text-align: center">K = S1 + S2 + S3</h4>
+        <p>Di mana :</p>
+        K = Keliling <br />
+        S1 = Sisi A <br />
+        S2 = Sisi B <br />
+        S3 = Sisi C <br />
 
-      <input type="number" id="sideA" placeholder="Nilai sisi A" />
+        <div class="garis-pembatas"></div>
+        <h1 style="text-align: center">Hitung Keliling Segitiga</h1>
 
-      <input type="number" id="sideB" placeholder="Nilai sisi B" />
-
-      <input type="number" id="sideC" placeholder="Nilai sisi C" />
+        <input type="number" id="sideA" placeholder="Nilai sisi A" />
+        <input type="number" id="sideB" placeholder="Nilai sisi B" />
+        <input type="number" id="sideC" placeholder="Nilai sisi C" />
+      </div>
     </div>
+
     <div class="buttons">
       <button onclick="calculate()">Hitung</button>
       <button onclick="resetForm()">Reset</button>
