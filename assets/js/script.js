@@ -33,8 +33,7 @@ function resetForm() {
   document.getElementById("sideA").value = "";
   document.getElementById("sideB").value = "";
   document.getElementById("sideC").value = "";
-  document.getElementById("result").textContent =
-    "Hasil perhitungan akan ditampilkan di sini.";
+  document.getElementById("result").textContent = "";
 }
 
 function switchCalculationType() {
