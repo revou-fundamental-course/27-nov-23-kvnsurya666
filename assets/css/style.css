@@ -64,6 +64,7 @@ input {
 }
 
 button {
+  display: flex;
   background-color: #2880b9;
   color: white;
   padding: 10px 20px;
