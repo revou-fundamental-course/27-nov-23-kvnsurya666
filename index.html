@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Katik Luas Segitiga</title>
+    <title>Katik Segitiga</title>
 
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
@@ -15,15 +15,13 @@
       keliling bangun datar
     </p>
     <header id="navigation-bar">
-      <select id="segitiga">
-        <option value="luasSegitiga">Luas Segitiga</option>
-        <option value="kelilingSegitiga">
-          <a href="keliling_segitiga.html">Keliling Segitiga</a>
-        </option>
+      <select id="calculationType" onchange="switchCalculationType()">
+        <option value="area">Luas Segitiga</option>
+        <option value="perimeter">Keliling Segitiga</option>
       </select>
     </header>
 
-    <section class="input-luas-section" id="luasSegitiga">
+    <div id="areaFields">
       <img
         src="assets/images/gambar-segitiga.png"
         alt="Gambar Segitiga"
@@ -36,43 +34,40 @@
       a = Panjang Alas <br />
       t = Tinggi
       <h1 id="luas">Hitung Luas Segitiga</h1>
-      <input type="number" id="alas" class="katik-input" placeholder="Alas" />
-      <input
-        type="number"
-        id="tinggi"
-        class="katik-input"
-        placeholder="Tinggi"
+
+      <input type="number" id="base" placeholder="Nilai Alas" />
+
+      <input type="number" id="height" placeholder="Nilai Tinggi" />
+    </div>
+
+    <div id="perimeterFields" style="display: none">
+      <img
+        src="assets/images/gambar-segitiga.png"
+        alt="Gambar Segitiga"
+        class="gambar-segitiga"
       />
-      <div class="buttons">
-        <button onclick="hitung()">Hitung</button>
-        <h3 id="luasSegitiga"></h3>
-        <button onclick="clear()">Reset</button>
-      </div>
-    </section>
+      <p>Rumus Keliling Segitiga yaitu :</p>
+      <h4 style="text-align: center">K = S1 + S2 + S3</h4>
+      <p>Di mana :</p>
+      K = Keliling <br />
+      S1 = Sisi A <br />
+      S2 = Sisi B <br />
+      S3 = Sisi C <br />
+      <h1 id="luas">Hitung Keliling Segitiga</h1>
 
-    <!-- <section class="input-keliling-section" id="keliling">
-      <label for="input-sisi1" id="label-sisi1">Sisi</label>
-      <input type="number" id="input-sisi" class="katik-input" />
-      <label for="input-sisi2" id="label-sisi2">Sisi</label>
-      <input type="number" id="input-sisi" class="katik-input" />
-      <label for="input-sisi2" id="label-sisi3">Sisi</label>
-      <input type="number" id="input-sisi" class="katik-input" />
-      <div class="buttons">
-        <button onclick="hitung()">Hitung</button>
-        <h3 id="keliling"></h3>
-        <button onclick="clear()">Reset</button>
-      </div>
-    </section> -->
+      <input type="number" id="sideA" placeholder="Masukkan panjang sisi A" />
 
-    <!-- <div class="container">
-      <h1>Kalkulator Luas dan Keliling Segitiga</h1>
-      <input type="number" id="sisi1" placeholder="Masukkan panjang sisi 1" />
-      <input type="number" id="sisi2" placeholder="Masukkan panjang sisi 2" />
-      <input type="number" id="tinggi" placeholder="Masukkan panjang tinggi" />
-      <button onclick="hitung()">Hitung</button>
-      <h2 id="luas"></h2>
-      <h2 id="keliling"></h2>
-    </div> -->
+      <input type="number" id="sideB" placeholder="Masukkan panjang sisi B" />
+
+      <input type="number" id="sideC" placeholder="Masukkan panjang sisi C" />
+    </div>
+    <div class="buttons">
+      <button onclick="calculate()" id="hitung">Hitung</button>
+      <button onclick="resetForm()" id="reset">Reset</button>
+    </div>
+
+    <p id="result">Hasil perhitungan akan ditampilkan di sini.</p>
+
     <script src="assets/js/script.js"></script>
   </body>
 </html>

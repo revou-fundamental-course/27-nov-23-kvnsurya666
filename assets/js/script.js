@@ -1,41 +1,78 @@
-function luasSegitiga() {
-  document.getElementById("luasSegitiga").innerHTML =
-    "This is the content for Function 1.";
-}
+function calculateArea() {
+  var base = parseFloat(document.getElementById("base").value);
+  var height = parseFloat(document.getElementById("height").value);
 
-function kelilingSegitiga() {
-  document.getElementById("kelilingSegitiga").innerHTML =
-    "This is the content for Function 2.";
-}
-
-document
-  .getElementById("select-function")
-  .addEventListener("change", function () {
-    switch (this.value) {
-      case "luasSegitiga":
-        luasSegitiga();
-        break;
-      case "kelilingSegitiga":
-        kelilingSegitiga();
-        break;
-    }
-  });
-
-function hitung() {
-  var sisi1 = document.getElementById("sisi1").value;
-  var sisi2 = document.getElementById("sisi2").value;
-  var sisi3 = document.getElementById("sisi3").value;
-  var tinggi = document.getElementById("tinggi").value;
-
-  if (alas == "" || sisi1 == "" || sisi2 == "" || sisi3 == "" || tinggi == "") {
-    alert("Mohon isi semua input");
+  if (!isNaN(base) && !isNaN(height)) {
+    var area = 0.5 * base * height;
+    displayResult(
+      `L = 1/2 x a x t \n L = 1/2 x ${base} x ${height}\n L = ${area}`
+    );
   } else {
-    var luas = 0.5 * alas * tinggi;
-    var keliling = sisi1 + sisi2 + sisi3;
+    alert("Masukkan angka yang valid untuk alas dan tinggi.");
+  }
+}
 
-    document.getElementById("luasSegitiga").innerHTML =
-      "Luas Segitiga: " + luasSegitiga;
-    document.getElementById("keliling").innerHTML =
-      "Keliling Segitiga: " + keliling;
+function calculatePerimeter() {
+  var sideA = parseFloat(document.getElementById("sideA").value);
+  var sideB = parseFloat(document.getElementById("sideB").value);
+  var sideC = parseFloat(document.getElementById("sideC").value);
+
+  if (!isNaN(sideA) && !isNaN(sideB) && !isNaN(sideC)) {
+    var perimeter = sideA + sideB + sideC;
+    displayResult(
+      `K = S1 + S2 + S3 \n K = ${sideA} + ${sideB} + ${sideC}\n K = ${perimeter}`
+    );
+  } else {
+    alert("Masukkan angka yang valid untuk panjang sisi segitiga.");
+  }
+}
+
+function resetForm() {
+  document.getElementById("base").value = "";
+  document.getElementById("height").value = "";
+  document.getElementById("sideA").value = "";
+  document.getElementById("sideB").value = "";
+  document.getElementById("sideC").value = "";
+  document.getElementById("result").textContent =
+    "Hasil perhitungan akan ditampilkan di sini.";
+}
+
+function switchCalculationType() {
+  var calculationType = document.getElementById("calculationType").value;
+
+  switch (calculationType) {
+    case "area":
+      document.getElementById("areaFields").style.display = "block";
+      document.getElementById("perimeterFields").style.display = "none";
+
+      break;
+    case "perimeter":
+      document.getElementById("areaFields").style.display = "none";
+      document.getElementById("perimeterFields").style.display = "block";
+
+      break;
+    default:
+      break;
+  }
+}
+
+function displayResult(resultText) {
+  document.getElementById("result").textContent = resultText;
+}
+
+function calculate() {
+  var calculationType = document.getElementById("calculationType").value;
+
+  switch (calculationType) {
+    case "area":
+      calculateArea();
+
+      break;
+    case "perimeter":
+      calculatePerimeter();
+
+      break;
+    default:
+      break;
   }
 }
