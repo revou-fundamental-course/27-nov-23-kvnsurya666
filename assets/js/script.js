@@ -4,11 +4,7 @@ function calculateArea() {
 
   if (!isNaN(base) && !isNaN(height)) {
     var area = 0.5 * base * height;
-    displayResult(
-      `L = 1/2 x a x t \n 
-      L = 1/2 x ${base} x ${height}\n 
-      L = ${area}`
-    );
+    displayResult(`Luas Segitiga = ${area}`);
   } else {
     alert("Masukkan angka yang valid untuk alas dan tinggi.");
   }
@@ -21,11 +17,7 @@ function calculatePerimeter() {
 
   if (!isNaN(sideA) && !isNaN(sideB) && !isNaN(sideC)) {
     var perimeter = sideA + sideB + sideC;
-    displayResult(
-      `K = S1 + S2 + S3 \n
-       K = ${sideA} + ${sideB} + ${sideC}\n 
-       K = ${perimeter}`
-    );
+    displayResult(`Keliling Segitiga = ${perimeter}`);
   } else {
     alert("Masukkan angka yang valid untuk panjang sisi segitiga.");
   }
